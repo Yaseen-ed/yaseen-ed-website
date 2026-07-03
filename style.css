@@ -1,0 +1,102 @@
+/* Base Setup and Luxury Typography */
+:root {
+    --primary-gold: #B59410;
+    --dark-gold: #94780D;
+    --luxury-black: #1C1C1C;
+    --soft-white: #FAF9F6;
+}
+
+body {
+    background-color: var(--soft-white);
+    color: var(--luxury-black);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Luxury Gold Gradient Text */
+.gold-text-gradient {
+    background: linear-gradient(135deg, #DFBA35 0%, #B59410 50%, #836905 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Navigation Hover Effects */
+nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--primary-gold);
+    transition: width .3s;
+}
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Before/After Image Slider Styling */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.slider-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-before {
+    z-index: 1;
+}
+
+.img-after {
+    z-index: 2;
+    /* Shuruat mein aadha image dikhane ke liye clip path */
+    clip-path: inset(0 0 0 50%);
+}
+
+.slider-handle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background: white;
+    z-index: 3;
+    cursor: ew-resize;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: var(--primary-gold);
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    pointer-events: none;
+}
+
+/* Smooth Image Hover in Gallery */
+.gallery-item img {
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
