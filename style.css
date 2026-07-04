@@ -100,3 +100,43 @@ nav a:hover::after {
 .gallery-item:hover img {
     transform: scale(1.08);
 }
+/* Mobile Swipe Menu */
+.no-scrollbar::-webkit-scrollbar{
+    display:none;
+}
+
+.no-scrollbar{
+    -ms-overflow-style:none;
+    scrollbar-width:none;
+}
+
+@media (max-width:768px){
+
+    nav .max-w-7xl{
+        flex-wrap:wrap;
+    }
+
+    nav .no-scrollbar{
+        width:100%;
+        order:3;
+        margin-top:12px;
+        padding-bottom:5px;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+    nav .no-scrollbar a{
+        flex:0 0 auto;
+        display:inline-block;
+        padding-bottom:8px;
+    }
+
+    nav .bg-\[\#B59410\]{
+        padding:8px 14px;
+        font-size:12px;
+    }
+
+    nav .serif-font{
+        font-size:22px;
+    }
+}
