@@ -141,7 +141,7 @@ nav a:hover::after {
 .slider{
     width:95%;
     max-width:900px;
-    aspect-ratio:1/1;
+    aspect-ratio:3/2;
     overflow:hidden;
     border-radius:20px;
     box-shadow:0 10px 30px rgba(0,0,0,.18);
